@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Letter</title>
+    <style>
+        body {
+            font-family: 'MS Sans Serif', Tahoma, Geneva, sans-serif;
+            background-color: #c3c7cb;
+            color: black;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .window {
+            background-color: #ffffff;
+            border: 2px solid #000000;
+            width: 90%;
+            max-width: 600px;
+            box-shadow: 4px 4px 0px #7a7a7a;
+            margin-bottom: 20px;
+        }
+        .title-bar {
+            background-color: #000080;
+            color: white;
+            padding: 5px 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 14px;
+        }
+        .title-bar button {
+            background-color: #c3c7cb;
+            border: 1px solid #7a7a7a;
+            width: 16px;
+            height: 16px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: bold;
+            line-height: 14px;
+        }
+        .title-bar button:hover {
+            background-color: #ff0000;
+            color: white;
+        }
+        .content {
+            padding: 15px;
+            font-size: 14px;
+        }
+        .button-container {
+            text-align: center;
+            margin-top: 10px;
+        }
+        button {
+            background-color: #c3c7cb;
+            border: 2px solid #000000;
+            padding: 5px 10px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        button:hover {
+            background-color: #a1a1a1;
+        }
+        .letter-part {
+            display: none;
+            margin-top: 15px;
+            background: #e4e4e4;
+            padding: 10px;
+            border: 1px solid #7a7a7a;
+            box-shadow: inset 2px 2px #ffffff, inset -2px -2px #7a7a7a;
+        }
+        iframe {
+            margin-top: 10px;
+            border: none;
+            width: 100%;
+            max-width: 600px;
+            height: 80px;
+            border-radius: 8px;
+        }
+        .spotify-container {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="window">
+        <div class="title-bar">
+            <span>ChristyBot</span>
+            <button title="Close">✕</button>
+        </div>
+        <div class="content">
+            <p><strong>to the most annoying person i know</strong></p>
+            <p>click for kool stuff :P</p>
+
+            <div class="button-container">
+                <button onclick="showPart()">Open</button>
+                <div id="letter-part" class="letter-part">
+                    <p>to my dearest bombon,</p>
+                    <p>happy second anniversary, my love. another year of bickering and more, yet you're still the one i search for in every moment, in every crowd. the person i still think about whenever i hear my favorite song. the person that fills my mind even though you make me mad, i still can't help but fall back to you. i love you way too much and i wouldn't have it any other way.</p>
+                    <p>if fate is on our side, then i wish to enjoy more years in the noise and in the silence, whatever it may be, as long as i'm with you. i love you!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Spotify Embed -->
+    <div class="spotify-container">
+        <iframe src="https://open.spotify.com/embed/track/6N7A3JFbsVOUcfiT6ltjrq?utm_source=generator" 
+                allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
+        </iframe>
+    </div>
+
+    <script>
+        function showPart() {
+            const part = document.getElementById("letter-part");
+            if (part) {
+                part.style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>
